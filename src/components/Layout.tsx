@@ -32,7 +32,14 @@ const Layout = ({ children }: LayoutProps) => {
         <p className="mt-2">
           <span className="mr-2">MIT License</span>
           <span className="opacity-60">|</span>
-          <span className="ml-2">Designed & Developed with ♥</span>
+          <a 
+            href="https://debdootmanna-old-portfolio.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="ml-2 hover:text-theme-red transition-colors"
+          >
+            Previous Portfolio
+          </a>
         </p>
       </footer>
     </div>

@@ -193,7 +193,7 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
       >
-        <span className="text-sm text-muted-foreground mb-2">Scroll Down</span>
+        <span className="text-sm text-muted-foreground mb-2">Explore the Digital Cosmos 🚀</span>
         <motion.div 
           animate={{ y: [0, 10, 0] }} 
           transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
