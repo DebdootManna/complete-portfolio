@@ -63,12 +63,32 @@ const EducationSection = () => {
                 animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="relative pl-10 md:pl-24"
+                whileHover={{ 
+                  scale: 1.03, 
+                  transition: { duration: 0.3 } 
+                }}
               >
-                <div className="absolute left-0 md:left-8 top-0 w-8 h-8 rounded-full border-2 border-theme-red bg-theme-black flex items-center justify-center ml-0.5 md:ml-0">
+                <motion.div 
+                  className="absolute left-0 md:left-8 top-0 w-8 h-8 rounded-full border-2 border-theme-red bg-theme-black flex items-center justify-center ml-0.5 md:ml-0"
+                  animate={isVisible ? 
+                    { scale: [0.8, 1.2, 1], boxShadow: "0 0 0 rgba(234, 56, 76, 0.4)" } : 
+                    {}
+                  }
+                  transition={{ 
+                    scale: { duration: 0.5, times: [0, 0.5, 1] },
+                    boxShadow: { delay: 0.5, duration: 2, repeat: Infinity, repeatType: "reverse" }
+                  }}
+                >
                   <div className="w-3 h-3 rounded-full bg-theme-red"></div>
-                </div>
+                </motion.div>
                 
-                <div className="glass-panel p-6 md:p-8">
+                <motion.div 
+                  className="glass-panel p-6 md:p-8"
+                  whileHover={{
+                    boxShadow: "0 0 25px rgba(234, 56, 76, 0.3)",
+                    backgroundColor: "rgba(255, 255, 255, 0.08)"
+                  }}
+                >
                   <span className="inline-block px-3 py-1 text-xs bg-theme-red/20 text-theme-red rounded-full mb-4">
                     2023 - Present
                   </span>
@@ -77,10 +97,14 @@ const EducationSection = () => {
                   <p className="text-lg text-white/80 mb-2">Computer Science and Technology</p>
                   <p className="text-white/60">Batch 2027</p>
                   
-                  <div className="absolute -right-2 -top-2 w-16 h-16 rounded-full bg-theme-red/10 backdrop-blur-lg flex items-center justify-center">
+                  <motion.div 
+                    className="absolute -right-2 -top-2 w-16 h-16 rounded-full bg-theme-red/10 backdrop-blur-lg flex items-center justify-center"
+                    animate={{ rotate: [0, 5, -5, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  >
                     <span className="text-2xl font-bold">B.S.</span>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
               
               {/* High School */}
@@ -89,12 +113,32 @@ const EducationSection = () => {
                 animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="relative pl-10 md:pl-24"
+                whileHover={{ 
+                  scale: 1.03, 
+                  transition: { duration: 0.3 } 
+                }}
               >
-                <div className="absolute left-0 md:left-8 top-0 w-8 h-8 rounded-full border-2 border-theme-red bg-theme-black flex items-center justify-center ml-0.5 md:ml-0">
+                <motion.div 
+                  className="absolute left-0 md:left-8 top-0 w-8 h-8 rounded-full border-2 border-theme-red bg-theme-black flex items-center justify-center ml-0.5 md:ml-0"
+                  animate={isVisible ? 
+                    { scale: [0.8, 1.2, 1], boxShadow: "0 0 0 rgba(234, 56, 76, 0.4)" } : 
+                    {}
+                  }
+                  transition={{ 
+                    scale: { duration: 0.5, delay: 0.2, times: [0, 0.5, 1] },
+                    boxShadow: { delay: 0.7, duration: 2, repeat: Infinity, repeatType: "reverse" }
+                  }}
+                >
                   <div className="w-3 h-3 rounded-full bg-theme-red"></div>
-                </div>
+                </motion.div>
                 
-                <div className="glass-panel p-6 md:p-8">
+                <motion.div 
+                  className="glass-panel p-6 md:p-8"
+                  whileHover={{
+                    boxShadow: "0 0 25px rgba(234, 56, 76, 0.3)",
+                    backgroundColor: "rgba(255, 255, 255, 0.08)"
+                  }}
+                >
                   <span className="inline-block px-3 py-1 text-xs bg-theme-red/20 text-theme-red rounded-full mb-4">
                     Graduated 2023
                   </span>
@@ -103,10 +147,14 @@ const EducationSection = () => {
                   <p className="text-lg text-white/80 mb-2">High School</p>
                   <p className="text-white/60">Batch 2023</p>
                   
-                  <div className="absolute -right-2 -top-2 w-16 h-16 rounded-full bg-theme-red/10 backdrop-blur-lg flex items-center justify-center">
+                  <motion.div 
+                    className="absolute -right-2 -top-2 w-16 h-16 rounded-full bg-theme-red/10 backdrop-blur-lg flex items-center justify-center"
+                    animate={{ rotate: [0, -5, 5, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  >
                     <span className="text-2xl font-bold">H.S.</span>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             </div>
           </div>

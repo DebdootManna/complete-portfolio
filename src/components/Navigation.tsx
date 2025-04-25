@@ -1,56 +1,37 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
-  const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const sections = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
-    { id: "skills", label: "Skills" },
-    { id: "education", label: "Education" },
-    { id: "services", label: "Services" },
-    { id: "contact", label: "Contact" }
+    { id: "home", label: "Home", path: "/" },
+    { id: "about", label: "About", path: "/about" },
+    { id: "projects", label: "Projects", path: "/projects" },
+    { id: "skills", label: "Skills", path: "/skills" },
+    { id: "education", label: "Education", path: "/education" },
+    { id: "services", label: "Services", path: "/services" },
+    { id: "contact", label: "Contact", path: "/contact" }
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       // Toggle navbar background when scrolled
       setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
-      const sectionElements = sections.map(section => ({
-        id: section.id,
-        element: document.getElementById(section.id),
-      })).filter(item => item.element);
-      
-      let currentSection = "home";
-      
-      sectionElements.forEach(({ id, element }) => {
-        const rect = element!.getBoundingClientRect();
-        if (rect.top <= 150 && rect.bottom >= 150) {
-          currentSection = id;
-        }
-      });
-      
-      setActiveSection(currentSection);
     };
     
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections]);
+  }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
-      setMobileMenuOpen(false);
-    }
+  const isActivePath = (path: string) => {
+    if (path === "/" && location.pathname === "/") return true;
+    if (path !== "/" && location.pathname.startsWith(path)) return true;
+    return false;
   };
 
   return (
@@ -67,7 +48,9 @@ const Navigation = () => {
             transition={{ duration: 0.5 }}
             className="text-xl font-bold text-white"
           >
-            <span className="text-theme-red">D</span>M
+            <Link to="/">
+              <span className="text-theme-red">D</span>M
+            </Link>
           </motion.div>
           
           {/* Desktop Navigation */}
@@ -78,24 +61,24 @@ const Navigation = () => {
             className="hidden md:flex space-x-8"
           >
             {sections.map((section) => (
-              <button
+              <Link
                 key={section.id}
-                onClick={() => scrollToSection(section.id)}
+                to={section.path}
                 className={`relative px-1 py-2 transition-colors duration-300 hoverable ${
-                  activeSection === section.id
+                  isActivePath(section.path)
                     ? "text-theme-red"
                     : "text-white hover:text-theme-red"
                 }`}
               >
                 {section.label}
-                {activeSection === section.id && (
+                {isActivePath(section.path) && (
                   <motion.div
                     layoutId="activeSection"
                     className="absolute bottom-0 left-0 w-full h-0.5 bg-theme-red"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
-              </button>
+              </Link>
             ))}
           </motion.div>
           
@@ -120,17 +103,18 @@ const Navigation = () => {
       >
         <div className="container py-4 flex flex-col space-y-4">
           {sections.map((section) => (
-            <button
+            <Link
               key={section.id}
-              onClick={() => scrollToSection(section.id)}
+              to={section.path}
+              onClick={() => setMobileMenuOpen(false)}
               className={`py-3 px-6 text-left transition-colors ${
-                activeSection === section.id
+                isActivePath(section.path)
                   ? "text-theme-red font-medium"
                   : "text-white"
               }`}
             >
               {section.label}
-            </button>
+            </Link>
           ))}
         </div>
       </motion.div>

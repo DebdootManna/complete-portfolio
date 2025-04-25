@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
@@ -17,8 +16,8 @@ interface TechSkill {
 const artisticSkills: Skill[] = [
   { name: "Music Production", percentage: 100, category: "House, Future Bass, Trap, Pop, Orchestral, Melodic, Mid Tempo", colorClass: "from-theme-red to-theme-red/70" },
   { name: "Painting", percentage: 85, category: "Non - Figurative drawings", colorClass: "from-theme-violet to-theme-violet/70" },
-  { name: "Photography", percentage: 60, category: "Abstract, object, product, sometimes landscape", colorClass: "from-theme-navy to-theme-navy/70" },
-  { name: "Films", percentage: 30, category: "Still learning but I have interest in Drama, Psychological", colorClass: "from-blue-500 to-blue-500/70" }
+  { name: "Photography", percentage: 60, category: "Abstract, object, product, sometimes landscape", colorClass: "from-blue-400 to-blue-400/70" },
+  { name: "Films", percentage: 30, category: "Still learning but I have interest in Drama, Psychological", colorClass: "from-green-400 to-green-400/70" }
 ];
 
 const techSkills: TechSkill[] = [
@@ -76,7 +75,6 @@ const SkillsSection = () => {
   
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   
-  // Group tech skills by category
   const groupedTechSkills: Record<string, TechSkill[]> = {};
   
   techSkills.forEach(skill => {
@@ -90,7 +88,6 @@ const SkillsSection = () => {
     if (isInView) {
       setIsVisible(true);
       
-      // Delay the skills animation slightly
       const timer = setTimeout(() => {
         setSkillsAnimated(true);
       }, 500);
@@ -124,7 +121,6 @@ const SkillsSection = () => {
           </p>
         </motion.div>
 
-        {/* Artistic Skills */}
         <div className="mb-20">
           <motion.h3 
             initial={{ opacity: 0, x: -20 }}
@@ -143,6 +139,7 @@ const SkillsSection = () => {
                 animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="space-y-2"
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-medium">{skill.name}</span>
@@ -166,7 +163,6 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        {/* Technical Skills */}
         <motion.h3 
           initial={{ opacity: 0, x: -20 }}
           animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}

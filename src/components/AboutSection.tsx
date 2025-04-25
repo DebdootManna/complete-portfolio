@@ -1,3 +1,4 @@
+
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -61,7 +62,7 @@ const AboutSection = () => {
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute -bottom-8 -right-8 p-4 glass-panel shadow-xl"
+              className="absolute -bottom-8 -right-8 p-4 glass-panel shadow-xl z-20"
             >
               <p className="text-lg font-bold text-theme-red">Debdoot Manna</p>
               <p className="text-sm text-white/80">a.k.a. The Messengers</p>
@@ -107,13 +108,20 @@ const AboutSection = () => {
                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
                   className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
+                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-theme-red rounded-full transform -translate-x-1/2 z-10"></div>
                   
                   <div className="w-full md:w-1/2 px-6 md:px-12 py-4 relative">
-                    <div className={`glass-panel p-6 ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}>
+                    <motion.div 
+                      className={`glass-panel p-6 ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}
+                      whileHover={{ 
+                        boxShadow: "0 0 15px rgba(234, 56, 76, 0.4)",
+                        backgroundColor: "rgba(255, 255, 255, 0.1)"
+                      }}
+                    >
                       <p className="text-lg">{item}</p>
-                    </div>
+                    </motion.div>
                   </div>
                   
                   <div className="hidden md:block w-1/2"></div>
