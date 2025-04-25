@@ -14,19 +14,19 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Nebula Soundscapes",
+    title: "Gravitry",
     category: "music",
-    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb",
-    description: "A fusion of celestial ambient sounds and deep house rhythms designed to transport listeners to another dimension.",
-    link: "https://open.spotify.com/album/26QlxsORL2Yh7zPt8Xh6gj"
+    image: "https://cdn-images.dzcdn.net/images/cover/1a7306a6eeee9052ac23a366a79ed6c4/1900x1900-000000-80-0-0.jpg",
+    description: "A fusion of celestial ambient sounds and a mid tempo rhythms designed to transport listeners to another dimension.",
+    link: "https://open.spotify.com/track/7HuHPpLlvyBhFdyeLQM0JP?si=24656d5971064a2e"
   },
   {
     id: 2,
-    title: "Quantum Code",
+    title: "Browser Fingerprint Viewer",
     category: "tech",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+    image: "/images/image_of_browser_whisper_app.png",
     description: "A Next.js application with advanced cybersecurity features for secure data transmission.",
-    link: "https://github.com/DebdootManna"
+    link: "https://github.com/DebdootManna/browser-whisperer-reveal"
   },
   {
     id: 3,
@@ -51,6 +51,14 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb",
     description: "An experimental AI-driven interface for music production using machine learning algorithms.",
     link: "https://github.com/DebdootManna"
+  },
+  {
+    id: 6,
+    title: "Solitary Star - Album",
+    category: "music",
+    image: "https://cdn-images.dzcdn.net/images/cover/1a7306a6eeee9052ac23a366a79ed6c4/1900x1900-000000-80-0-0.jpg",
+    description: "My first ever album. This link is of Apple Music",
+    link: "https://music.apple.com/us/album/solitary-star/1797310730"
   }
 ];
 
