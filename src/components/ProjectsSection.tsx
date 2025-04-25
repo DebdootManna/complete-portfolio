@@ -14,7 +14,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Gravitry",
+    title: "Gravity",
     category: "music",
     image: "https://cdn-images.dzcdn.net/images/cover/1a7306a6eeee9052ac23a366a79ed6c4/1900x1900-000000-80-0-0.jpg",
     description: "A fusion of celestial ambient sounds and a mid tempo rhythms designed to transport listeners to another dimension.",
@@ -25,32 +25,32 @@ const projects: Project[] = [
     title: "Browser Fingerprint Viewer",
     category: "tech",
     image: "/images/image_of_browser_whisper_app.png",
-    description: "A Next.js application with advanced cybersecurity features for secure data transmission.",
+    description: "A Next.js application that displays your browser's fingerprints.",
     link: "https://github.com/DebdootManna/browser-whisperer-reveal"
   },
   {
     id: 3,
     title: "Digital Dreamscape",
     category: "art",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-    description: "An abstract visual art project exploring the intersection of technology and consciousness.",
-    link: "https://www.instagram.com/themessengersmusic/"
+    image: "images/liquor_image.png",
+    description: "Something different about this tea which looks like liquor...",
+    link: "https://www.instagram.com/p/CinY973t4xz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     id: 4,
-    title: "Cosmic Frequencies",
+    title: "Go On - EP",
     category: "music",
-    image: "https://images.unsplash.com/photo-1527576539890-dfa815648363",
-    description: "An orchestral electronic album combining classical instruments with futuristic synthesizers.",
-    link: "https://open.spotify.com/album/26QlxsORL2Yh7zPt8Xh6gj"
+    image: "images/go_on_image_art.png",
+    description: "An electronic album with soothing emotions with synths and ambience.",
+    link: "https://soundcloud.com/themessengersmusic/sets/go-on"
   },
   {
     id: 5,
     title: "Neural Interface",
     category: "tech",
-    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb",
-    description: "An experimental AI-driven interface for music production using machine learning algorithms.",
-    link: "https://github.com/DebdootManna"
+    image: "https://github.com/DebdootManna/Memory-Game/blob/main/Homepage_Image.png?raw=true",
+    description: "Its that card flip game",
+    link: "https://github.com/DebdootManna/Memory-Game"
   },
   {
     id: 6,
