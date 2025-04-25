@@ -61,11 +61,3 @@ Check out my [Previous Portfolio](https://debdootmanna-old-portfolio.vercel.app)
 ## License
 
 MIT License
-
-## Contact
-
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
-
-## Designed & Developed with ♥ by Debdoot Manna
