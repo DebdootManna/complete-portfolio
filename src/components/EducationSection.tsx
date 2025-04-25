@@ -93,7 +93,7 @@ const EducationSection = () => {
                     2023 - Present
                   </span>
                   
-                  <h3 className="text-xl md:text-2xl font-bold mb-2">Charter University of Science and Technology</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">Charotar University of Science and Technology</h3>
                   <p className="text-lg text-white/80 mb-2">Computer Science and Technology</p>
                   <p className="text-white/60">Batch 2027</p>
                   
