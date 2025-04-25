@@ -50,7 +50,7 @@ const AboutSection = () => {
               <div className="relative z-10 bg-theme-dark p-4 rounded-lg shadow-xl">
                 <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+                    src="images/image.jpg" 
                     alt="Abstract Digital Art" 
                     className="w-full h-full object-cover"
                   />
