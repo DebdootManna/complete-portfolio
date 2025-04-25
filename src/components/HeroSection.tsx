@@ -1,6 +1,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const TypedText = ({ text, delay = 0 }: { text: string, delay?: number }) => {
   const [visibleText, setVisibleText] = useState("");
@@ -46,6 +47,7 @@ const TypedText = ({ text, delay = 0 }: { text: string, delay?: number }) => {
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate(); // Add navigate hook for routing
   
   const typingTexts = [
     "Intergalactic musician & full-stack magician",
@@ -79,6 +81,16 @@ const HeroSection = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Handle navigation to projects page
+  const handleViewProjects = () => {
+    navigate('/projects');
+  };
+  
+  // Handle navigation to contact page
+  const handleContactMe = () => {
+    navigate('/contact');
+  };
 
   return (
     <section 
@@ -160,13 +172,13 @@ const HeroSection = () => {
             className="flex flex-col md:flex-row justify-center md:justify-start gap-4"
           >
             <button 
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={handleViewProjects}
               className="px-8 py-3 bg-theme-red text-white rounded-md transition-all hover:bg-theme-red/80 hover:shadow-lg hover:shadow-theme-red/20"
             >
               View Projects
             </button>
             <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={handleContactMe}
               className="px-8 py-3 border border-white/20 text-white rounded-md transition-all hover:bg-white/5 hover:border-white/40"
             >
               Contact Me
