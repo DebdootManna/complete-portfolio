@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-This is a personal portfolio website showcasing the professional journey, skills, and projects of Debdoot Manna. Built with modern web technologies, the site provides a comprehensive view of my professional capabilities and creative endeavors.
+This is a personal portfolio website showcasing the professional journey, skills, and projects of Debdoot Manna. Built with modern web technologies, the site provides a comprehensive view of my professional capabilities and creative endeavours.
 
 ## Technologies Used
 
@@ -38,10 +38,10 @@ This is a personal portfolio website showcasing the professional journey, skills
 
 ```sh
 # Clone the repository
-git clone <YOUR_REPOSITORY_URL>
+git clone <[YOUR_REPOSITORY_URL](https://github.com/DebdootManna/complete-portfolio)>
 
 # Navigate to the project directory
-cd debdoot-manna-portfolio
+cd complete-portfolio
 
 # Install dependencies
 npm install
@@ -52,7 +52,7 @@ npm run dev
 
 ## Deployment
 
-Deployed on Vercel. [View Live Site](https://your-deployment-url.vercel.app)
+Deployed on Vercel. [View Live Site](https://debdootmanna.me)
 
 ## Previous Portfolio
 
