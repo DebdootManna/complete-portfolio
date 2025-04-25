@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        // Custom colors for our portfolio
+        'theme-red': '#ea384c',
+        'theme-navy': '#0a192f',
+        'theme-black': '#121212',
+        'theme-violet': '#9b87f5',
+        'theme-dark': '#0F0F0F',
+        'theme-light': '#f8f8f8'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,56 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        // Custom animations
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        'slide-in-right': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
+        'slide-in-left': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
+        'typing': {
+          '0%': { width: '0' },
+          '100%': { width: '100%' }
+        },
+        'blink': {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'hsl(var(--primary))' }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        'pulse-glow': {
+          '0%, 100%': { 
+            boxShadow: '0 0 5px rgba(234, 56, 76, 0.2), 0 0 20px rgba(234, 56, 76, 0.2)' 
+          },
+          '50%': { 
+            boxShadow: '0 0 20px rgba(234, 56, 76, 0.6), 0 0 40px rgba(234, 56, 76, 0.4)' 
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
+        'fade-in': 'fade-in 0.5s ease-out forwards',
+        'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
+        'slide-in-left': 'slide-in-left 0.5s ease-out forwards',
+        'typing': 'typing 3.5s steps(40, end)',
+        'blink-caret': 'blink 0.75s step-end infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			}
 		}
 	},
