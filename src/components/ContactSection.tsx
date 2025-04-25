@@ -143,7 +143,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="ml-2 text-theme-red hover:underline"
               >
-                github.com/DebdootManna/website
+                github.com/DebdootManna/complete-portfolio
               </a>
             </p>
             
