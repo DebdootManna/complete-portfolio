@@ -38,7 +38,7 @@ This is a personal portfolio website showcasing the professional journey, skills
 
 ```sh
 # Clone the repository
-git clone <[YOUR_REPOSITORY_URL](https://github.com/DebdootManna/complete-portfolio)>
+git clone <(https://github.com/DebdootManna/complete-portfolio)>
 
 # Navigate to the project directory
 cd complete-portfolio
