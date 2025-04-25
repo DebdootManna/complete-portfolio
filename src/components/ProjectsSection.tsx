@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Digital Dreamscape",
+    title: "have some tea...",
     category: "art",
     image: "images/liquor_image.png",
     description: "Something different about this tea which looks like liquor...",
@@ -46,7 +46,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Neural Interface",
+    title: "Memory Game",
     category: "tech",
     image: "https://github.com/DebdootManna/Memory-Game/blob/main/Homepage_Image.png?raw=true",
     description: "Its that card flip game",
