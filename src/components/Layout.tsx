@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
         <p className="mt-2">
           <span className="mr-2">MIT License</span>
           <span className="opacity-60">|</span>
-          <span className="ml-2">Old Portfolio</span>, link: "https://www.instagram.com/themessengersmusic/"
+          <span className="ml-2">Designed & Developed with ♥</span>
         </p>
       </footer>
     </div>
