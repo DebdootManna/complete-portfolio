@@ -138,7 +138,7 @@ const ContactSection = () => {
             <p className="text-white/50 mb-4">
               Project Link:
               <a 
-                href="https://www.google.com/search?q=https://github.com/DebdootManna/website" 
+                href="https://github.com/DebdootManna/complete-portfolio" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="ml-2 text-theme-red hover:underline"
