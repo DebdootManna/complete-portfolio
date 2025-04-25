@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -15,7 +14,7 @@ const AboutSection = () => {
 
   const journeyItems = [
     "First it was painting. (Before lockdown)",
-    "Then (after lockdown) it all started. Thanks to "boredomness" I got interest into many things (and one of them is music producing). I focused on that and build a profession for myself.",
+    "Then (after lockdown) it all started. Thanks to \"boredomness\" I got interest into many things (and one of them is music producing). I focused on that and build a profession for myself.",
     "Simultaneously got interest into computers and history of computers.",
     "Reading online articles and went into deep web (and later dark web). Got interest into a lot of stuff.",
     "First science, then physics, then quantum physics, then technology, then computer science."
@@ -39,7 +38,6 @@ const AboutSection = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -70,7 +68,6 @@ const AboutSection = () => {
             </motion.div>
           </motion.div>
           
-          {/* Text Column */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -91,7 +88,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
         
-        {/* Journey Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -101,7 +97,6 @@ const AboutSection = () => {
           <h3 className="text-2xl font-bold mb-6 text-center">My Journey</h3>
           
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-0 md:left-1/2 h-full w-px bg-theme-red/30 transform -translate-x-1/2"></div>
             
             <div className="space-y-12">
@@ -113,7 +108,6 @@ const AboutSection = () => {
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
                   className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-theme-red rounded-full transform -translate-x-1/2 z-10"></div>
                   
                   <div className="w-full md:w-1/2 px-6 md:px-12 py-4 relative">
