@@ -32,8 +32,8 @@ const contactMethods: ContactMethod[] = [
   {
     name: "Email",
     icon: <Mail className="w-8 h-8" />,
-    link: "mailto:debdootmanna007@outlook.com",
-    username: "debdootmanna007@outlook.com",
+    link: "mailto:debdootmanna@yahoo.com",
+    username: "debdootmanna@yahoo.com",
     color: "bg-gradient-to-br from-theme-red to-rose-500",
     description: "Contact me directly for project inquiries or collaborations"
   }
