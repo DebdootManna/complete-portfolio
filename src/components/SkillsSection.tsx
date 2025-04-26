@@ -1,3 +1,4 @@
+
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
@@ -148,7 +149,7 @@ const SkillsSection = () => {
                 
                 <div className="skill-bar">
                   <motion.div 
-                    className={`skill-progress bg-gradient-to-r ${skill.colorClass || 'from-theme-red to-theme-red/70'}`}
+                    className={`skill-progress bg-gradient-to-r ${skill.colorClass || 'from-theme-red to-theme-violet'}`}
                     initial={{ width: "0%" }}
                     animate={skillsAnimated ? { width: `${skill.percentage}%` } : { width: "0%" }}
                     transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
@@ -210,3 +211,4 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
+
