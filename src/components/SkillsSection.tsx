@@ -1,12 +1,15 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { Progress } from "@/components/ui/progress";
+import { Music, PaintBucket, Camera, Film } from "lucide-react";
 
 interface Skill {
   name: string;
   percentage: number;
   category: string;
   colorClass?: string;
+  icon?: React.ReactNode;
 }
 
 interface TechSkill {
@@ -15,10 +18,34 @@ interface TechSkill {
 }
 
 const artisticSkills: Skill[] = [
-  { name: "Music Production", percentage: 100, category: "House, Future Bass, Trap, Pop, Orchestral, Melodic, Mid Tempo", colorClass: "from-theme-red to-theme-red/70" },
-  { name: "Painting", percentage: 85, category: "Non - Figurative drawings", colorClass: "from-theme-violet to-theme-violet/70" },
-  { name: "Photography", percentage: 60, category: "Abstract, object, product, sometimes landscape", colorClass: "from-blue-400 to-blue-400/70" },
-  { name: "Films", percentage: 30, category: "Still learning but I have interest in Drama, Psychological", colorClass: "from-green-400 to-green-400/70" }
+  { 
+    name: "Music Production", 
+    percentage: 100, 
+    category: "House, Future Bass, Trap, Pop, Orchestral, Melodic, Mid Tempo", 
+    colorClass: "bg-gradient-to-r from-theme-red to-theme-red/70",
+    icon: <Music className="w-5 h-5" /> 
+  },
+  { 
+    name: "Painting", 
+    percentage: 85, 
+    category: "Non - Figurative drawings", 
+    colorClass: "bg-gradient-to-r from-theme-violet to-theme-violet/70",
+    icon: <PaintBucket className="w-5 h-5" /> 
+  },
+  { 
+    name: "Photography", 
+    percentage: 60, 
+    category: "Abstract, object, product, sometimes landscape", 
+    colorClass: "bg-gradient-to-r from-blue-400 to-blue-400/70",
+    icon: <Camera className="w-5 h-5" /> 
+  },
+  { 
+    name: "Films", 
+    percentage: 30, 
+    category: "Still learning but I have interest in Drama, Psychological", 
+    colorClass: "bg-gradient-to-r from-green-400 to-green-400/70",
+    icon: <Film className="w-5 h-5" /> 
+  }
 ];
 
 const techSkills: TechSkill[] = [
@@ -139,24 +166,37 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="space-y-2"
+                className="space-y-3 glass-panel p-5"
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-medium">{skill.name}</span>
-                  <span className="text-sm text-white/70">{skill.percentage}%</span>
+                <div className="flex justify-between items-center mb-1">
+                  <div className="flex items-center">
+                    <span className="mr-2 text-white/80">{skill.icon}</span>
+                    <span className="text-lg font-medium">{skill.name}</span>
+                  </div>
+                  <span className="text-sm font-mono bg-white/10 px-2 py-0.5 rounded">{skill.percentage}%</span>
                 </div>
                 
-                <div className="skill-bar">
+                {/* Using custom progress bar that's visible */}
+                <div className="h-2.5 w-full bg-white/10 rounded-full overflow-hidden">
                   <motion.div 
-                    className={`skill-progress bg-gradient-to-r ${skill.colorClass || 'from-theme-red to-theme-violet'}`}
-                    initial={{ width: "0%" }}
-                    animate={skillsAnimated ? { width: `${skill.percentage}%` } : { width: "0%" }}
+                    className={`h-full rounded-full ${skill.colorClass}`}
+                    style={{ width: `${skill.percentage}%` }}
+                    initial={{ width: 0 }}
+                    animate={skillsAnimated ? { width: `${skill.percentage}%` } : { width: 0 }}
                     transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
                   />
                 </div>
                 
-                <p className="text-sm text-white/60">
+                {/* Using shadcn/ui Progress component as a backup */}
+                <div className="hidden">
+                  <Progress 
+                    value={skillsAnimated ? skill.percentage : 0} 
+                    className="h-2" 
+                  />
+                </div>
+                
+                <p className="text-sm text-white/60 pt-1">
                   {skill.category}
                 </p>
               </motion.div>
@@ -211,4 +251,3 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
-
