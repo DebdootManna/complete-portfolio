@@ -18,6 +18,12 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			sans: ['var(--font-ojuju)', 'sans-serif'],
+			heading: ['var(--font-madimi-one)', 'sans-serif'],
+			ojuju: ['var(--font-ojuju)', 'sans-serif'],
+			madimi: ['var(--font-madimi-one)', 'sans-serif']
+		},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',

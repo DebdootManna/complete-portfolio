@@ -5,6 +5,8 @@
 
 @layer base {
   :root {
+    --font-ojuju: 'Ojuju', sans-serif;
+    --font-madimi-one: 'Madimi One', sans-serif;
     --background: 0 0% 7%;
     --foreground: 0 0% 98%;
 
@@ -44,7 +46,13 @@
 
   body {
     @apply bg-theme-black text-foreground overflow-x-hidden;
+    font-family: var(--font-ojuju);
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-madimi-one);
+    font-weight: 400;
   }
 
   /* Custom scrollbar - using direct CSS instead of non-existent Tailwind classes */
