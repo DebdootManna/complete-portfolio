@@ -16,7 +16,7 @@ const projects: Project[] = [
     id: 1,
     title: "RoomGenius",
     category: "AI",
-    image: "/images/room_genius_image.png",
+    image: "/images/roomgenius.png",
     description: "AI-Powered Room Designer for Simple People",
     link: "https://room-genius-nine.vercel.app/"
   },
