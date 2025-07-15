@@ -5,7 +5,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 interface Project {
   id: number;
   title: string;
-  category: "music" | "tech" | "art";
+  category: "music" | "tech" | "art" | "AI";
   image: string;
   description: string;
   link?: string;
@@ -14,11 +14,11 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Gravity",
-    category: "music",
-    image: "https://cdn-images.dzcdn.net/images/cover/1a7306a6eeee9052ac23a366a79ed6c4/1900x1900-000000-80-0-0.jpg",
-    description: "A fusion of celestial ambient sounds and a mid tempo rhythms designed to transport listeners to another dimension.",
-    link: "https://open.spotify.com/track/7HuHPpLlvyBhFdyeLQM0JP?si=24656d5971064a2e"
+    title: "RoomGenius",
+    category: "AI",
+    image: "/images/room_genius_image.png",
+    description: "AI-Powered Room Designer for Simple People",
+    link: "https://room-genius-nine.vercel.app/"
   },
   {
     id: 2,
@@ -30,11 +30,11 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "have some tea...",
-    category: "art",
-    image: "images/liquor_image.png",
-    description: "Something different about this tea which looks like liquor...",
-    link: "https://www.instagram.com/p/CinY973t4xz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    title: "Yolo App",
+    category: "AI",
+    image: "/images/yolo_app.png",
+    description: "Full-Stack web application for AI-powered object detection using YOLO models",
+    link: "https://yolo-app-seven.vercel.app/"
   },
   {
     id: 4,
@@ -46,11 +46,11 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Memory Game",
-    category: "tech",
-    image: "https://github.com/DebdootManna/Memory-Game/blob/main/Homepage_Image.png?raw=true",
-    description: "Its that card flip game",
-    link: "https://github.com/DebdootManna/Memory-Game"
+    title: "Smart Workplace Assistant",
+    category: "AI",
+    image: "/images/smart_workplace_assistant.png",
+    description: "AI-powered workplace productivity platform",
+    link: "smart-workplace-assistant.vercel.app/"
   },
   {
     id: 6,
@@ -59,6 +59,30 @@ const projects: Project[] = [
     image: "https://cdn-images.dzcdn.net/images/cover/1a7306a6eeee9052ac23a366a79ed6c4/1900x1900-000000-80-0-0.jpg",
     description: "My first ever album. This link is of Apple Music",
     link: "https://music.apple.com/us/album/solitary-star/1797310730"
+  },
+  {
+    id: 7,
+    title: "AI Game Creator",
+    category: "AI",
+    image: "/images/ai_game_creator.png",
+    description: "Browser-based games using natural language prompts",
+    link: "https://v0-ai-game-creator.vercel.app/"
+  },
+  {
+    id: 8,
+    title: "Insight Flow AI",
+    category: "AI",
+    image: "/images/insightflowai.png",
+    description: "A web application that transforms structured data into insightful narrative reports using AI.",
+    link: "https://insight-flow-ai.vercel.app/"
+  },
+  {
+    id: 9,
+    title: "Scroll Story Ads",
+    category: "tech",
+    image: "/images/scroll_story_ads.png",
+    description: "A realistic Instagram feed layout with parallax-animated ads.",
+    link: "https://scroll-story-ads.vercel.app/"
   }
 ];
 
